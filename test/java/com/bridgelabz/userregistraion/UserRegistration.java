@@ -52,5 +52,22 @@ public class UserRegistration {
         result = userValidator.validateEmailId("ahemmedhussain1525@gmail.coin");
         Assert.assertEquals("sad", result);
     }
+    //Checking the validity of mobile number
+    @Test
+    public void givenMobileNumber_WhenValid_ReturnHappy()
+    {
+        UserValidator userValidator = new UserValidator();
+        String result;
+        result = userValidator.validateMobileNumber("91 7730851594");
+        Assert.assertEquals("happy", result);
+    }
+    @Test
+    public void givenMobileNumber_WhenInValid_ReturnSad()
+    {
+        UserValidator userValidator = new UserValidator();
+        String result;
+        result = userValidator.validateMobileNumber("917730851594");
+        Assert.assertEquals("sad", result);
+    }
 }
 
