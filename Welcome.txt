@@ -1,1 +1,0 @@
-Welcome to user validation using Junit
