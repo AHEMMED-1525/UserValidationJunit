@@ -96,5 +96,6 @@ public class UserRegistration {
           Assert.assertEquals("Please enter correct password", e.getMessage() );
          }
     }
+    
 }
 
