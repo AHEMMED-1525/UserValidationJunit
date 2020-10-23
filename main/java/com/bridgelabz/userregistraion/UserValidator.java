@@ -13,5 +13,13 @@ public class UserValidator {
         	return "happy";
         return "sad";
     }
+  //Last name Validation
+    public String validLastName(String lname)
+    {
+        Pattern pattern = Pattern.compile(NAME_PATTERN);
+        if (pattern.matcher(lname).matches())
+        	return "happy";
+        return "sad";
+    }
 
 }

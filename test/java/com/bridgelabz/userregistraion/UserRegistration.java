@@ -20,6 +20,20 @@ public class UserRegistration {
         Assert.assertEquals("sad", result);
     }
  
-
+    //Checking the validity of second name
+    @Test
+    public void givenLastName_WhenProper_ReturnHappy()
+    {
+        UserValidator userValidator = new UserValidator();
+       String result = userValidator.validLastName("Lucky");
+       Assert.assertEquals("happy", result);
+    }
+    @Test
+    public void givenLastName_WhenImProper_ReturnSad()
+    {
+        UserValidator userValidator = new UserValidator();
+       String result = userValidator.validLastName("An");
+       Assert.assertEquals("sad", result);
+    }
 }
 
