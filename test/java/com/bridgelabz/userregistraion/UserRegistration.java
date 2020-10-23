@@ -35,5 +35,22 @@ public class UserRegistration {
        String result = userValidator.validLastName("An");
        Assert.assertEquals("sad", result);
     }
+    //Checking the validity of email id
+    @Test
+    public void givenEmail_WhenValid_ReturnHappy()
+    {
+        UserValidator userValidator = new UserValidator();
+        String result;
+        result = userValidator.validateEmailId("ahemmedhussain1525@gmail.co.in");
+        Assert.assertEquals("happy", result);
+    }
+    @Test
+    public void givenEmail_WhenInValid_ReturnSad()
+    {
+        UserValidator userValidator = new UserValidator();
+        String result;
+        result = userValidator.validateEmailId("ahemmedhussain1525@gmail.coin");
+        Assert.assertEquals("sad", result);
+    }
 }
 
