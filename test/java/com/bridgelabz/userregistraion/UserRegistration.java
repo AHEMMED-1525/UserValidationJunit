@@ -69,5 +69,22 @@ public class UserRegistration {
         result = userValidator.validateMobileNumber("917730851594");
         Assert.assertEquals("sad", result);
     }
+    //Check the validity of password
+    @Test
+    public void givenPassword_WhenValid_ReturnHappy()
+    {
+        UserValidator userValidator = new UserValidator();
+        String result;
+        result = userValidator.validatePassword("Ahemmed1525@");
+        Assert.assertEquals("happy", result);
+    }
+    @Test
+    public void givenPassword_WhenInValid_ReturnSad()
+    {
+        UserValidator userValidator = new UserValidator();
+        String result;
+        result = userValidator.validatePassword("Lucky");
+        Assert.assertEquals("sad", result);
+    }
 }
 
