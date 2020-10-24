@@ -4,29 +4,29 @@ import org.junit.Assert;
 import org.junit.Test;
 public class UserRegistration {
 	
-	  //Checking the validity of first name
+	  //validate First name
     @Test
     public void givenfirstName_WhenProper_ReturnHappy() throws Exception {
         UserValidator userValidator = new UserValidator();
         String result;
-        result = userValidator.validateFirstName("Kainey");
+        result = userValidator.validateFirstName("Ahemmed");
         Assert.assertEquals("happy", result);
     }
     @Test
     public void givenfirstName_WhenImpProper_ReturnSad() throws Exception {
        try {
     	   UserValidator userValidator = new UserValidator();
-    	   userValidator.validateFirstName("za");
+    	   userValidator.validateFirstName("Aa");
        }catch(userRegistartionException e) {
         Assert.assertEquals("Please enter correct first name", e.getMessage() );
        }
     }
-    //Checking the validity of second name
+    //  validate  Last name
     @Test
     public void givenLastName_WhenProper_ReturnHappy() throws Exception
     {
         UserValidator userValidator = new UserValidator();
-       String result = userValidator.validLastName("Lekize");
+       String result = userValidator.validLastName("Lucky");
        Assert.assertEquals("happy", result);
     }
     @Test
@@ -34,18 +34,18 @@ public class UserRegistration {
     {
     	 try {
       	   UserValidator userValidator = new UserValidator();
-      	   userValidator.validLastName("lo");
+      	   userValidator.validLastName("re");
          }catch(userRegistartionException e) {
           Assert.assertEquals("Please enter correct second name", e.getMessage() );
          }
     }
-    //Checking the validity of email id
+    //validate Email id
     @Test
     public void givenEmail_WhenValid_ReturnHappy() throws Exception
     {
         UserValidator userValidator = new UserValidator();
         String result;
-        result = userValidator.validateEmailId("ikhale@gmail.co.in");
+        result = userValidator.validateEmailId("ahemmed@gmail.co.in");
         Assert.assertEquals("happy", result);
     }
     @Test
@@ -53,18 +53,18 @@ public class UserRegistration {
     {
     	 try {
       	   UserValidator userValidator = new UserValidator();
-      	   userValidator.validateEmailId("kiloe");
+      	   userValidator.validateEmailId("ahemmmedhussain15");
          }catch(userRegistartionException e) {
           Assert.assertEquals("Please enter correct email", e.getMessage() );
          }
     }
-    //Checking the validity of mobile number
+    //validate mobile number
     @Test
     public void givenMobileNumber_WhenValid_ReturnHappy() throws Exception 
     {
         UserValidator userValidator = new UserValidator();
         String result;
-        result = userValidator.validateMobileNumber("91 9745945143");
+        result = userValidator.validateMobileNumber("91 7730851594");
         Assert.assertEquals("happy", result);
     }
     @Test
@@ -72,18 +72,18 @@ public class UserRegistration {
     {
     	 try {
       	   UserValidator userValidator = new UserValidator();
-      	   userValidator.validateMobileNumber("9869532");
+      	   userValidator.validateMobileNumber("82970");
          }catch(userRegistartionException e) {
           Assert.assertEquals("Please enter correct mobile number", e.getMessage() );
          }
     }
-    //Check the validity of password
+    //validate password
     @Test
     public void givenPassword_WhenValid_ReturnHappy() throws Exception
     {
         UserValidator userValidator = new UserValidator();
         String result;
-        result = userValidator.validatePassword("ASDsde986#");
+        result = userValidator.validatePassword("Ahemmed@125");
         Assert.assertEquals("happy", result);
     }
     @Test
@@ -91,7 +91,7 @@ public class UserRegistration {
     {
     	 try {
       	   UserValidator userValidator = new UserValidator();
-      	   userValidator.validatePassword("ghyui");
+      	   userValidator.validatePassword("ahmd");
          }catch(userRegistartionException e) {
           Assert.assertEquals("Please enter correct password", e.getMessage() );
          }
