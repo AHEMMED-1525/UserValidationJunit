@@ -9,14 +9,14 @@ public class UserRegistration {
     public void givenfirstName_WhenProper_ReturnHappy() throws Exception {
         UserValidator userValidator = new UserValidator();
         String result;
-        result = userValidator.validateFirstName("Kainey");
+        result = userValidator.validateFirstName("Ahemmed");
         Assert.assertEquals("happy", result);
     }
     @Test
     public void givenfirstName_WhenImpProper_ReturnSad() throws Exception {
        try {
     	   UserValidator userValidator = new UserValidator();
-    	   userValidator.validateFirstName("za");
+    	   userValidator.validateFirstName("lU");
        }catch(userRegistartionException e) {
         Assert.assertEquals("Please enter correct first name", e.getMessage() );
        }
@@ -26,7 +26,7 @@ public class UserRegistration {
     public void givenLastName_WhenProper_ReturnHappy() throws Exception
     {
         UserValidator userValidator = new UserValidator();
-       String result = userValidator.validLastName("Lekize");
+       String result = userValidator.validLastName("Lucky");
        Assert.assertEquals("happy", result);
     }
     @Test
@@ -34,7 +34,7 @@ public class UserRegistration {
     {
     	 try {
       	   UserValidator userValidator = new UserValidator();
-      	   userValidator.validLastName("lo");
+      	   userValidator.validLastName("ah");
          }catch(userRegistartionException e) {
           Assert.assertEquals("Please enter correct second name", e.getMessage() );
          }
@@ -45,7 +45,7 @@ public class UserRegistration {
     {
         UserValidator userValidator = new UserValidator();
         String result;
-        result = userValidator.validateEmailId("ikhale@gmail.co.in");
+        result = userValidator.validateEmailId("ahemmedhussain1525@gmail.co.in");
         Assert.assertEquals("happy", result);
     }
     @Test
@@ -53,7 +53,7 @@ public class UserRegistration {
     {
     	 try {
       	   UserValidator userValidator = new UserValidator();
-      	   userValidator.validateEmailId("kiloe");
+      	   userValidator.validateEmailId("ahemmed");
          }catch(userRegistartionException e) {
           Assert.assertEquals("Please enter correct email", e.getMessage() );
          }
@@ -64,7 +64,7 @@ public class UserRegistration {
     {
         UserValidator userValidator = new UserValidator();
         String result;
-        result = userValidator.validateMobileNumber("91 9745945143");
+        result = userValidator.validateMobileNumber("91 7730851594");
         Assert.assertEquals("happy", result);
     }
     @Test
@@ -72,7 +72,7 @@ public class UserRegistration {
     {
     	 try {
       	   UserValidator userValidator = new UserValidator();
-      	   userValidator.validateMobileNumber("9869532");
+      	   userValidator.validateMobileNumber("829703");
          }catch(userRegistartionException e) {
           Assert.assertEquals("Please enter correct mobile number", e.getMessage() );
          }
@@ -83,7 +83,7 @@ public class UserRegistration {
     {
         UserValidator userValidator = new UserValidator();
         String result;
-        result = userValidator.validatePassword("ASDsde986#");
+        result = userValidator.validatePassword("Ahemmed#1525");
         Assert.assertEquals("happy", result);
     }
     @Test
@@ -91,7 +91,7 @@ public class UserRegistration {
     {
     	 try {
       	   UserValidator userValidator = new UserValidator();
-      	   userValidator.validatePassword("ghyui");
+      	   userValidator.validatePassword("ahemed");
          }catch(userRegistartionException e) {
           Assert.assertEquals("Please enter correct password", e.getMessage() );
          }
