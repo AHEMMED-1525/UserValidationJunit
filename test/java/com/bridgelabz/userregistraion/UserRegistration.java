@@ -95,7 +95,7 @@ public class UserRegistration {
          }catch(userRegistartionException e) {
           Assert.assertEquals("Please enter correct password", e.getMessage() );
          }
-    }
+    } 
     
 }
 
