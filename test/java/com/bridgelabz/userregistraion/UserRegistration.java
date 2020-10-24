@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 public class UserRegistration {
 	
-	  //Checking the validity of first name
+	  //validate First name
     @Test
     public void givenfirstName_WhenProper_ReturnHappy() throws Exception {
         UserValidator userValidator = new UserValidator();
@@ -21,7 +21,7 @@ public class UserRegistration {
         Assert.assertEquals("Please enter correct first name", e.getMessage() );
        }
     }
-    //Checking the validity of second name
+    //  validate  Last name
     @Test
     public void givenLastName_WhenProper_ReturnHappy() throws Exception
     {
@@ -39,7 +39,7 @@ public class UserRegistration {
           Assert.assertEquals("Please enter correct second name", e.getMessage() );
          }
     }
-    //Checking the validity of email id
+    //validate Email id
     @Test
     public void givenEmail_WhenValid_ReturnHappy() throws Exception
     {
@@ -58,7 +58,7 @@ public class UserRegistration {
           Assert.assertEquals("Please enter correct email", e.getMessage() );
          }
     }
-    //Checking the validity of mobile number
+    //validate mobile number
     @Test
     public void givenMobileNumber_WhenValid_ReturnHappy() throws Exception 
     {
@@ -77,7 +77,7 @@ public class UserRegistration {
           Assert.assertEquals("Please enter correct mobile number", e.getMessage() );
          }
     }
-    //Check the validity of password
+    //validate password
     @Test
     public void givenPassword_WhenValid_ReturnHappy() throws Exception
     {
@@ -96,5 +96,6 @@ public class UserRegistration {
           Assert.assertEquals("Please enter correct password", e.getMessage() );
          }
     }
+    
 }
 
