@@ -36,7 +36,7 @@ public class ParameterizedEmail {
                 {"abc@gmail.com.aa.au", false}});
     }
     @Test
-    public void givenEmail_ShouldReturnAsPerParameterizedResult() {
+    public void givenEmail_ShouldReturnAsPerParameterizedResult() throws Exception {
         UserValidator userValidator = new UserValidator();
         String result = userValidator.validateEmailId(this.emailTest);
         Assert.assertEquals(result,this.expectedResult);

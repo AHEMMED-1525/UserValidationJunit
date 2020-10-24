@@ -8,25 +8,24 @@ public class UserRegistration {
     @Test
     public void givenfirstName_WhenProper_ReturnHappy() throws Exception {
         UserValidator userValidator = new UserValidator();
-        String result;
-        result = userValidator.validateFirstName("Kainey");
+        boolean result = userValidator.validateFirstName("Ahemmed");
         Assert.assertEquals("happy", result);
     }
     @Test
     public void givenfirstName_WhenImpProper_ReturnSad() throws Exception {
        try {
     	   UserValidator userValidator = new UserValidator();
-    	   userValidator.validateFirstName("za");
+    	   userValidator.validateFirstName("Aa");
        }catch(userRegistartionException e) {
         Assert.assertEquals("Please enter correct first name", e.getMessage() );
        }
     }
-    //Checking the validity of second name
+    //Checking the validity of last name
     @Test
     public void givenLastName_WhenProper_ReturnHappy() throws Exception
     {
         UserValidator userValidator = new UserValidator();
-       String result = userValidator.validLastName("Lekize");
+       boolean result = userValidator.validLastName("Lucky");
        Assert.assertEquals("happy", result);
     }
     @Test
@@ -44,8 +43,7 @@ public class UserRegistration {
     public void givenEmail_WhenValid_ReturnHappy() throws Exception
     {
         UserValidator userValidator = new UserValidator();
-        String result;
-        result = userValidator.validateEmailId("ikhale@gmail.co.in");
+        boolean result = userValidator.validateEmailId("ahemmedhussain1525@gmail.com");
         Assert.assertEquals("happy", result);
     }
     @Test
@@ -63,8 +61,7 @@ public class UserRegistration {
     public void givenMobileNumber_WhenValid_ReturnHappy() throws Exception 
     {
         UserValidator userValidator = new UserValidator();
-        String result;
-        result = userValidator.validateMobileNumber("91 9745945143");
+        boolean result= userValidator.validateMobileNumber("91 9745945143");
         Assert.assertEquals("happy", result);
     }
     @Test
@@ -82,8 +79,7 @@ public class UserRegistration {
     public void givenPassword_WhenValid_ReturnHappy() throws Exception
     {
         UserValidator userValidator = new UserValidator();
-        String result;
-        result = userValidator.validatePassword("ASDsde986#");
+        boolean result = userValidator.validatePassword("Ahemed@1525");
         Assert.assertEquals("happy", result);
     }
     @Test
@@ -91,7 +87,7 @@ public class UserRegistration {
     {
     	 try {
       	   UserValidator userValidator = new UserValidator();
-      	   userValidator.validatePassword("ghyui");
+      	   userValidator.validatePassword("Ansn");
          }catch(userRegistartionException e) {
           Assert.assertEquals("Please enter correct password", e.getMessage() );
          }
