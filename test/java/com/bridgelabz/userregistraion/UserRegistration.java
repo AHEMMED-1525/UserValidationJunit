@@ -1,5 +1,6 @@
 package com.bridgelabz.userregistraion;
 
+
 import org.junit.Assert;
 import org.junit.Test;
 public class UserRegistration {
